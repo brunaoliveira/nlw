@@ -53,10 +53,29 @@ background: var(--color-primary);
 
     text-decoration: none;
 
+    /* controla a velocidade da mudança de cor do hovering */
+    transition: background 0.2s;
     color: var(--color-button-text);
 }
 
+.buttons-container a img {
+    width: 4rem;
+}
+
 .buttons-container a.study {
+    background: var(--color-primary-lighter);
+}
 
+.buttons-container a.study:hover {
+    /* muda a cor enquanto mouse está hovering o elemento */
+    background:var(--color-primary-light);
+}
 
+.buttons-container a.give-classes {
+    background: var(--color-secondary);
+    margin-right: 0;
+}
+
+.buttons-container a.give-classes:hover {
+    background: var(--color-secondary-dark);
 }
