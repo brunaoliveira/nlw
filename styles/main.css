@@ -61,3 +61,11 @@ textarea {
     width: 90vw; /* ocupa apenas 90 de 100 partes */
     max-width: 700px;   
 }
+
+@media (min-width: 700px) {
+    :root {
+        /* td 1rem vai ser relativo a 10px, pq o size dos navegadores é de 16px */
+        /* 1rem=10px, 1.5rem=16px quando muda de layout */
+        font-size: 62.5%;
+    }
+}
