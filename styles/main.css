@@ -40,7 +40,7 @@ html, body {
     height: 100vh;
 }
 body {
-    background: var(--color-primary-darker);
+    background: var(--color-background);
     display: flex;
     align-items: center;
     justify-content: center;
