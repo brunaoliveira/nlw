@@ -1,12 +1,14 @@
 
 .select-block label,
-.input-block label {
+.input-block label,
+.textarea-block label {
     font-size: 1.4rem;
     color: var(--color-text-complement);
 }
 
 .input-block input,
-.select-block select {
+.select-block select,
+.textarea-block textarea {
     width: 100%;
     height: 5.6rem;
     margin-top: 0.8rem;
@@ -19,11 +21,22 @@
     font: 1.6rem Archivo;
 }
 
-.input-block {
+/* mais uns pequenos ajustes alem dos de cima */
+.textarea-block textarea{
+    padding: 1.2rem 1.6rem;
+    height: 16rem;
+
+    /* permitir resize do box da bio só verticalmente */
+    resize: vertical;
+}
+
+.input-block,
+.textarea-block {
     position: relative;
 }
 
-.input-block:focus-within::after {
+.input-block:focus-within::after,
+.textarea-block:focus-within::after  {
     /* quando algum elemento do input-block estiver em foco cria um elemento after de forma dinâmica*/
     content: "";
 
