@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/partials/header.css">
+    <link rel="stylesheet" href="/styles/partials/forms.css">
     <link rel="stylesheet" href="/styles/partials/page-give-classes.css">
 
     <!-- busca no google as fontes que vão ser usadas no projeto -->
@@ -23,13 +24,40 @@
                 <img src="/images/logo.svg" alt="Proffy">
             </div>
             <div class="header-content">
-                <strong>Esses são os proffys disponíveis.</strong>
-              
-                
+                <strong>Que incrível que você quer dar aulas.</strong>
+                <p>O primeiro passo é preecher esse formulário de inscrição.</p>               
             </div>
         </header>
 
        <main>
+           <form action="" id="create-class">
+               <!-- para fazer agrupamento de dados -->
+               <fieldset>
+                   <legend>Seus dados</legend>
+                   <div class="input-block">
+                       <label for="name">Nome completo</label>
+                       <input name="name" id="name" required>
+                   </div>
+                   <div class="input-block">
+                       <label for="avatar">Link da sua foto
+                           <small>(comece com https://)</small>
+                           <input name="avatar" id="avatar" type="url" required>
+                       </label>
+                   </div>
+                   <div class="input-block">
+                       <label for="whatsapp">Whatsapp
+                           <small>(somente números)</small>
+                           <input name="whatsapp" id="whatsapp" type="number" required>
+                       </label>
+                   </div>
+                   <div class="textarea-block">
+                       <label for="bio">Biografia</label>
+                       <textarea name="bio" id="bio" required></textarea>
+                   </div>
+
+                   <legend></legend>
+               </fieldset>
+           </form>
 
 
        </main>
