@@ -1,3 +1,4 @@
+// DATA
 const proffys = [
     {
         name: "Diego Fernandes", 
@@ -47,6 +48,17 @@ const subjects = [
     "Química"
 ]
 
+const weekdays = [
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado"
+]
+
+// FUNCTIONS
 function pageLanding(req, res) {
     // sem nunjucks: return res.sendFile(__dirname + "/views/index.html")
     return res.render("index.html")
@@ -54,23 +66,35 @@ function pageLanding(req, res) {
 
 function pageStudy(req, res) {
     filters = req.query
-    return res.render("study.html", {proffys, subjects, filters})
+    return res.render("study.html", {proffys, subjects, weekdays, filters})
 }
 
 function giveClasses(req, res) {
-    return res.render("give-classes.html")
+    data = req.query
+    // Object.keys(data) é um array com as chaves -> [name, avatar, bio, ..]
+    // se data veio vazio, é [] e seu length é 0 e isEmpty=True
+    const isNotEmpty = Object.keys(data).length > 0
+
+    if (isNotEmpty) {
+        proffys.push(data)
+        res.redirect("/study")
+    }
+
+    return res.render("give-classes.html", {subjects, weekdays, data})
 }
 
+// SERVER
 const express = require('express')
 const server = express()
-const nunjucks = require('nunjucks')
 
-// connfigura nunjucks
+// TEMPLATE ENGINE (connfigura nunjucks)
+const nunjucks = require('nunjucks')
 nunjucks.configure('src/views', {
     express: server,
     noCache: true
 })
 
+// SERVER CONFIG
 server
 // configura arquivos estáticos (css, scripts, imgs)
 .use(express.static("public"))
@@ -78,5 +102,6 @@ server
 .get("/", pageLanding)
 .get("/study", pageStudy)
 .get("/give-classes", giveClasses)
+// server start
 .listen(5500)
 // console.log(__dirname)
