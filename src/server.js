@@ -76,11 +76,16 @@ function giveClasses(req, res) {
     const isNotEmpty = Object.keys(data).length > 0
 
     if (isNotEmpty) {
+        data.subject = getSubject(data.subject)
         proffys.push(data)
         res.redirect("/study")
     }
 
     return res.render("give-classes.html", {subjects, weekdays, data})
+}
+
+function getSubject(subjectNumber) {
+    return subjects[+subjectNumber - 1]
 }
 
 // SERVER
