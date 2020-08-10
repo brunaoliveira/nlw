@@ -1,7 +1,7 @@
 # Proffy
 Project made for the Next Level Week #2 [@Rocketseat](https://github.com/Rocketseat).
 
-The main ideia is to create a responsive application to gather people that want to teach with others that want to learn.
+The main ideia is to create a responsive application to gather people that want to teach with ones that want to learn.
 
 # Snapshots
 ![proffy landing page](https://user-images.githubusercontent.com/7097408/89836413-18930e00-db3d-11ea-8a82-283a0585ca51.png)
