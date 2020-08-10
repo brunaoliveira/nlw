@@ -13,19 +13,18 @@ The main ideia is to create an application to gather people that want to teach w
 - SQLite
 
 # How to Run
-Clone
+### Clone
 ```
 git clone https://github.com/brunaoliveira/proffy.git
 cd proffy
 ```
 
-Download dependencies
+### Download dependencies
 ```
 npm i
 ```
 
-
-Run server
+### Run server
 ```
 npm run dev
 ```
