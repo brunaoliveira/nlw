@@ -1,7 +1,7 @@
 # Proffy
 Project made for the Next Level Week #2 [@Rocketseat](https://github.com/Rocketseat).
 
-The main ideia is to create an application to gather people that whant to teach with other that want to learn.
+The main ideia is to create an application to gather people that want to teach with other that want to learn.
 
 ## Tecnologies used
 - HTML
