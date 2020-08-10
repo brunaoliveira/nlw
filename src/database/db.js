@@ -1,9 +1,9 @@
 const database = require('sqlite-async')
 
-function execute(database) {
+function execute(db) {
     // node src/database/db.js
     // console.log(db)
-    return database.exec(`
+    return db.exec(`
         CREATE TABLE IF NOT EXISTS proffys (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT,

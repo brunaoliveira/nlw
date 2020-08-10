@@ -1,5 +1,5 @@
-const database = require('./db.js')
-const createProffy = require('./createProffy.js')
+const database = require('./db')
+const createProffy = require('./createProffy')
 
 database.then(async (db) => {
     proffyValue = {
@@ -43,10 +43,10 @@ database.then(async (db) => {
     const selectedClassesSchedules = await db.all(`
         SELECT class_schedule.*
         FROM class_schedule
-        WHERE class_schedule.class_id = 1
+        WHERE class_schedule.class_id = "1"
         AND class_schedule.weekday = "0"
-        AND class_schedule.time_from <= 520
-        AND class_schedule.time_to > 520;
+        AND class_schedule.time_from <= "520"
+        AND class_schedule.time_to > "520";
     `)
     // console.log(selectedClassesSchedules)
 })
