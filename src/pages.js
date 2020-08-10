@@ -1,6 +1,5 @@
 const database = require('./database/db')
 const {subjects, weekdays, getSubjects, convertHoursToMinutes} = require('./utils/format')
-const { query } = require('express')
 
 function pageLanding(req, res) {
     // sem nunjucks: return res.sendFile(__dirname + "/views/index.html")
